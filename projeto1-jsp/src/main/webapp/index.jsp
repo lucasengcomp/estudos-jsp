@@ -1,19 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Aplicação JSP</title>
+<meta charset="ISO-8859-1">
+<title>Curso JSP</title>
 </head>
 <body>
-	<h1>Primeiro hello word</h1>
 
-	<form action="receber-nome.jsp">
-		<input name="nome">
-		<input name="idade">
-		<input type="submit" value="Enviar">
+	<h1>Estudo JSP</h1>
+
+	<form action="ServletLogin" method="post">
+		<input type="hidden" value="<%=request.getParameter("url")%>"
+			name="url">
+		<table>
+			<tr>
+				<td><label>Login</label></td>
+				<td><input name="login" type="text"></td>
+			</tr>
+
+			<tr>
+				<td><label>Senha</label></td>
+				<td><input name="senha" type="password"></td>
+			</tr>
+
+			<tr>
+				<td />
+				<td><input type="submit" value="Enviar"></td>
+			</tr>
+		</table>
+
 	</form>
+
+	<h4>${msg}</h4>
 
 </body>
 </html>
