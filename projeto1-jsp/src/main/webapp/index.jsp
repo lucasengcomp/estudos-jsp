@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@ h5 {
 
 .msg {
 	position: absolute;
-	top: 70%;
+	top: 20%;
 	left: 33%;
 	font-size: 15px;
 	color: red;
@@ -40,7 +39,7 @@ h5 {
 
 </head>
 <body>
-	<h5>Estudo JSP</h5>
+	<h5>Faça seu Login</h5>
 
 	<form action="ServletLogin" method="post"
 		class="row g-3 needs-validation" novalidate>
@@ -48,19 +47,19 @@ h5 {
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">
 
-		<div class="col-md-6">
+		<div class="md-3">
 			<label class="form-label" for="login">Login</label> <input
 				class="form-control" id="login" name="login" type="text" required>
-			<div class="invalid-feedback">Obrigatório</div>
-			<div class="valid-feedback">ok</div>
+			<div class="invalid-feedback">Campo obrigatório</div>
+			<div class="valid-feedback">Tudo certo!</div>
 		</div>
 
-		<div class="col-md-6">
+		<div class="md-3">
 			<label class="form-label" for="senha">Senha</label> <input
 				class="form-control" id="senha" name="senha" type="password"
 				required>
-			<div class="invalid-feedback">Obrigatório</div>
-			<div class="valid-feedback">ok</div>
+			<div class="invalid-feedback">Campo obrigatório</div>
+			<div class="valid-feedback">Tudo certo!</div>
 		</div>
 		<input type="submit" value="Acessar" class="btn btn-primary">
 	</form>
